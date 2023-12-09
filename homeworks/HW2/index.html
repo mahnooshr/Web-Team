@@ -184,7 +184,62 @@
   </section>
 
   <section id="reserve">
-    <!-- Reserve section content goes here -->
+    <h1>
+      Reserve a Table
+    </h1>
+    <div class="reserve-info">
+      <form>
+        <label>
+          Name:
+        </label>
+        <input type="text" name="name">
+        <label>
+          Email:
+        </label>
+        <input type="email" name="email">
+        <label>
+          Date:
+        </label>
+        <input type="date" name="date">
+        <label>
+          Time:
+        </label>
+        <input type="time" name="time">
+        <label>
+          Number of Guests:
+        </label>
+        <input type="number" name="guests">
+        <label>
+          Order:
+        </label>
+        <select name="order" id="order" >
+          <!-- Coffee -->
+          <option value="" selected disabled hidden>Choose an item</option>
+          <option value="americano">Americano</option>
+          <option value="cappuccino">Cappuccino</option>
+          <option value="espresso">Espresso</option>
+          <option value="latte">Latte</option>
+          <option value="macchiato">Macchiato</option>
+          <option value="mocha">Mocha</option>
+
+          <!-- Desert -->
+          <option value="cake">Cake</option>
+          <option value="cookie">Cookie</option>
+          <option value="croissant">Croissant</option>
+          <option value="muffin">Muffin</option>
+          <option value="pastry">Pastry</option>
+          <option value="pie">Pie</option>
+
+          <!-- Breakfast -->
+          <option value="bagel">Bagel</option>
+          <option value="bread">Bread</option>
+          <option value="cereal">Cereal</option>
+          <option value="eggs">Eggs</option>
+          <option value="pancakes">Pancakes</option>
+        </select>
+        <button type="submit">Reserve</button>
+      </form>
+    </div>
   </section>
 </body>
 </html>
