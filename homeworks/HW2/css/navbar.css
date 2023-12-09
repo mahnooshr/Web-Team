@@ -152,93 +152,28 @@
 }
 
 #description {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-    font-weight: 600;
-    color: #000;
-    text-decoration: none;
-}
-
-
-
-.cafe-name {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    font-weight: 600;
-    color: #000;
-    text-decoration: none;
-}
-
-.cafe-name:hover {
-    color: #000;
-}
-
-#description {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 50px 0;
-  }
-  
-  .cafe-name {
-    font-size: 24px;
-    font-weight: 600;
-    color: #000;
-    text-decoration: none;
-    margin-bottom: 20px;
-  }
-  
-  .cafe-description {
-    max-width: 800px;
-    margin: 0 auto;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
-  }
-  
-  @media (max-width: 768px) {
-    .cafe-description {
-      font-size: 16px;
-    }
-  }
-.details {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
+  text-align: center;
+  padding: 50px 0;
 }
 
-.details .icon {
-  width: 30px; /* Adjust the width as needed */
-  height: 30px; /* Adjust the height as needed */
-  margin-right: 10px;
-}
-
-.details .icon img {
-  width: 100%;
-  height: 100%;
-}
-
+.details,
 .services {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
 
+.details .icon,
 .services .icon {
   width: 30px; /* Adjust the width as needed */
   height: 30px; /* Adjust the height as needed */
   margin-right: 10px;
 }
 
+.details .icon img,
 .services .icon img {
   width: 100%;
   height: 100%;
