@@ -164,6 +164,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  text-direction:row;
 }
 
 .details .icon,
@@ -171,6 +172,7 @@
   width: 50px; /* Adjust the width as needed */
   height: 50px; /* Adjust the height as needed */
   margin-right: 10px;
+  text-direction:row;
 }
 
 .details .icon img,
