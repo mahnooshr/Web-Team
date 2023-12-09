@@ -1,7 +1,7 @@
 .header {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 60px;
     width: 100%;
@@ -15,11 +15,9 @@
 
 .container {
     display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    margin: auto;
-    height: 100%;
-    padding: 2px 4px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .nav-rightmenu {
