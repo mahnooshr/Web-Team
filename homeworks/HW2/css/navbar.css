@@ -1,0 +1,70 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    margin: auto;
+    height: 100%;
+    padding: 2px 4px;
+}
+
+.nav-rightmenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+
+.nav-leftmenu {
+    display: flex;
+    align-items: center;
+}
+
+.container .nav-rightmenu a {
+    padding: 0 14px;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#description {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+}
+
+
+
+.cafe-name {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+}
+
+.cafe-name:hover {
+    color: #000;
+}
+
+.cafe-description {
+    display: inline-block;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+}
+

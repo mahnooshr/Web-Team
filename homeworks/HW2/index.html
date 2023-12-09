@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head> 
   <title>Coffee Shop</title>
-  <style>
-    /* CSS styles go here */
-  </style>
+  <link rel="stylesheet" type="text/css" href="css/navbar.css">
+  <link rel="stylesheet" type="text/css" href="css/gallery.css">
+  <link rel="stylesheet" type="text/css" href="css/menu.css">
 </head>
 <body>
-  <header>
-    <nav>
-        
-    </nav>
+  <header class="">
+    <!-- Header content goes here -->
+    <div class="container">
+      <div class="nav-leftmenu">
+        <img src="images/logo.jpg" alt="Coffee Shop" width="50px" height="50px">
+      </div>
+
+      <div style="flex: 1"></div>
+
+      
+      <div id="nav-rightmenu">
+        <a href="#home">Home</a>
+        <a href="#description">Description</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reserve">Reserve</a>
+      </div>
+    </div>
+
   </header>
 
   <section id="home">
@@ -19,14 +34,134 @@
 
   <section id="description">
     <!-- Description section content goes here -->
+    <div class="welcome">
+      <div class="cafe-name">
+        Our CAFE
+      </div>
+      <div class="cafe-description">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl ultricies diam
+          <br>
+          <br>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl ultricies diam
+        </p>
+      </div>
+      <div class="cafe-time">
+        <p>
+          <span>Monday - Friday</span>
+          <br>
+          8:00 AM - 11:00 PM
+        </p>
+        <p>
+          <span>Saturday - Sunday</span>
+          <br>
+          8:00 AM - 12:00 PM
+        </p>
+      </div>
+      <div class="cafe-location">
+        <p>
+          <span>Location</span>
+          <br>
+          1234 Main St, New York, NY 10001
+        </p>
+      </div>
+      <div class="cafe-images">
+        <img src="images/cafe1.jpg" alt="Cafe 1" width="300px" height="200px">
+        <img src="images/cafe2.jpg" alt="Cafe 2" width="300px" height="200px">
+        <img src="images/cafe3.jpg" alt="Cafe 3" width="300px" height="200px">
+      </div>
+    </div>
   </section>
 
   <section id="menu">
-    <!-- Menu section content goes here -->
+    <div class="flexbox">
+
+      <div class="items_box">
+
+          <div class="image">
+              <span style="font-size: 30px; color: white">image</span>
+          </div>
+
+          <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dolor doloribus eveniet iusto molestias, officia omnis optio quos ullam voluptates.
+          </div>
+
+      </div>
+
+      <div class="items_box">
+
+          <div class="image">
+              <span style="font-size: 30px; color: white">image</span>
+          </div>
+
+          <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci doloribus perspiciatis? Dolores fuga labore maxime, minima non quas voluptas.
+          </div>
+
+      </div>
+
+      <div class="items_box">
+
+          <div class="image">
+              <span style="font-size: 30px; color: white">image</span>
+          </div>
+
+          <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci doloribus eaque harum magni minima nam repellendus tempore veritatis? Laudantium, perferendis.
+          </div>
+
+      </div>
+
+      <div class="items_box">
+
+          <div class="image">
+              <span style="font-size: 30px; color: white">image</span>
+          </div>
+
+          <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deserunt excepturi molestias numquam omnis porro quaerat quidem sapiente sequi temporibus.
+          </div>
+
+      </div>
+
+      <div class="items_box">
+
+          <div class="image">
+              <span style="font-size: 30px; color: white">image</span>
+          </div>
+
+          <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur autem cupiditate enim iusto nostrum odio omnis quam quia tempora voluptatum?
+          </div>
+
+      </div>
+
+  </div>
   </section>
 
   <section id="gallery">
-    <!-- Gallery section content goes here -->
+    <h2>Photo Gallery</h2>
+  
+    <div class="gallery">
+        <figure>
+        <img src="images/pic4.jpg">
+        <figcaption>Cafe Interior</figcaption> 
+      </figure>
+      <figure>
+        <img src="images/pic1.jpg">
+        <figcaption>Cappuccino</figcaption>
+      </figure>
+      <figure>
+        <img src="images/pic2.jpg">
+        <figcaption>pastries</figcaption>
+      </figure>
+      <figure>
+        <img src="images/pic3.jpg">
+        <figcaption>Breakfast</figcaption>
+      </figure>
+    
+    </div>
+  
   </section>
 
   <section id="reserve">

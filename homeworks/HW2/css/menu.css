@@ -1,0 +1,36 @@
+.flexbox{
+    background: rosybrown;
+    display: flex;
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.items_box{
+    background: navajowhite;
+    width: 500px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap
+}
+
+.image{
+    width: 300px;
+    height: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: brown
+}
+
+.content{
+    width: 450px;
+    height: auto;
+    font-size: 20px
+}
