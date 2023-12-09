@@ -210,3 +210,26 @@
       font-size: 16px;
     }
   }
+.details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.details img {
+  width: 30px; /* Adjust the width as needed */
+  height: 30px; /* Adjust the height as needed */
+  margin-right: 10px;
+}
+
+.services {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.services img {
+  width: 30px; /* Adjust the width as needed */
+  height: 30px; /* Adjust the height as needed */
+  margin-right: 10px;
+}
