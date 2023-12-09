@@ -45,3 +45,15 @@
     height: auto;
     font-size: 20px
 }
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: #e0e0e0; /* Set a background color */
+    padding: 50px; /* Add more padding for spacing */
+    box-sizing: border-box;
+}
