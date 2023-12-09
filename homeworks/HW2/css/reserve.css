@@ -23,6 +23,13 @@
     grid-gap: 20px;
 }
 
+.reserve-form div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
 .reserve-form label {
     font-size: 16px;
     font-weight: bold;
@@ -47,6 +54,14 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+}
+
+.reserve-form select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Add rounded corners */
 }
 
 .flex-end {
