@@ -27,6 +27,59 @@
     color: #fff;
     text-decoration: none;
   }
+#gallery {
+    font-family: 'Amatic SC', cursive;
+    text-align: center; 
+    background: #f5f5f5;
+  }
+  
+  .gallery {
+    grid-template-areas:
+      "one"
+      "two"
+      "three";  
+  }
+  .gallery figure:nth-child(4) {
+    grid-area: one; 
+  }
+  .gallery figure:nth-child(4) img {
+    width: 400px;
+    max-width: 100%;
+  }
+ 
+  .gallery figure:not(:nth-child(4)) img {
+    max-width: 200px; 
+  }
+  
+  .gallery figure {
+    display: inline-block;
+    padding: 10px;
+    background: #fff;
+    border: 10px solid #ddd; 
+  }
+  
+  .gallery figure:first-child {
+    grid-area: one;
+  }
+  .gallery figure:first-child img {
+    width: 400px;
+    max-width: 100%;
+  }
+  
+  .gallery figure:not(:first-child) img {
+    max-width: 200px;
+  }
+  
+  .gallery figcaption {
+    font-family: 'Josefin Sans', sans-serif;   
+    text-align: center;  
+  }
+  
+  .gallery img {
+    display: block;
+    height: auto; 
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  }
   
   section {
     padding: 20px;
