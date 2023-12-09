@@ -1,11 +1,11 @@
 .header {
+  background-color: burlywood;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     height: 60px;
     width: 100%;
-    background-color: #fff;
     border-bottom: 1px solid #e6e6e6;
     position: fixed;
     top: 0;
@@ -50,6 +50,7 @@
 }
 
 .navbar-link {
+    font-family: 'Open Sans', sans-serif;
     padding: 0 14px;
     text-decoration: none;
     color: #000;
@@ -98,6 +99,20 @@
     font-weight: 600;
     color: #000;
     text-decoration: none;
+}
+
+.navbar-brand {
+    display: flex;
+    font-family: 'Pacifico', cursive;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 14px;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .cafe-name:hover {
