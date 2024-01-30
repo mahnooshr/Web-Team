@@ -1,6 +1,6 @@
-Django==5.0
+Django==5.0.1
 djangorestframework==3.14.0
-Markdown==3.5.1
 django-filter==23.5
+Markdown==3.5.2
+python-dotenv==1.0.1
 psycopg2==2.9.9
-python-dotenv==1.0.0

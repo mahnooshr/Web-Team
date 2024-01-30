@@ -1,5 +1,5 @@
 """
-URL configuration for main project.
+URL configuration for gshop project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -17,7 +17,7 @@ Including another URLconf
 from django.urls import include, path
 from rest_framework import routers
 
-from vstream import views
+from gshop.api import views
 
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)

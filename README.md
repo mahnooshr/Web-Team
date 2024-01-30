@@ -1,6 +1,6 @@
 Live Video Streaming with Django and React
 ==========================================
-This is a simple project to demonstrate how to stream live video using Django and React.
+This is a simple gift shop website implemented using Django and React.
 
 ## Getting Started
 ### Prerequisites
