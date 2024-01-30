@@ -17,7 +17,7 @@ Including another URLconf
 from django.urls import include, path
 from rest_framework import routers
 
-from gshop.api import views
+from myapi import views
 
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)

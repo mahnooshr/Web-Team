@@ -1,4 +1,4 @@
-Live Video Streaming with Django and React
+Gift Card Shop with Django and React
 ==========================================
 This is a simple gift shop website implemented using Django and React.
 

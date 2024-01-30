@@ -4,3 +4,4 @@ django-filter==23.5
 Markdown==3.5.2
 python-dotenv==1.0.1
 psycopg2==2.9.9
+pillow==10.2.0
