@@ -1,6 +1,7 @@
 Django==5.0.1
 djangorestframework==3.14.0
 django-filter==23.5
+httpie==3.2.2
 Markdown==3.5.2
 python-dotenv==1.0.1
 psycopg2==2.9.9
