@@ -11,8 +11,22 @@ services:
 
   django_server:
     build: ./django
-    # TODO PART 1
+    deploy:
+      mode: replicated
+      replicas: ${DJANGO_REPLICAS}
+
+      resources:
+        limits:
+          cpus: ${DJANGO_CPU_LIMIT}
+          memory: ${DJANGO_MEMORY_LIMIT}
 
   go_server:
     build: ./go
-    # TODO PART 2
+    deploy:
+      mode: replicated
+      replicas: ${GO_REPLICAS}
+
+      resources:
+        limits:
+          cpus: ${GO_CPU_LIMIT}
+          memory: ${GO_MEMORY_LIMIT}
