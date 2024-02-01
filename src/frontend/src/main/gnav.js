@@ -3,6 +3,7 @@
 
 import React from 'react';
 import './gnav.css';
+import IconButton from '../utils/icon_button';
 
 function Gnav() {
     return (
@@ -12,7 +13,7 @@ function Gnav() {
             </div>
             <div className="gnav-search">
                 <input type="text" placeholder="Search" />
-                <button type="submit">Search</button>
+                <IconButton icon="search.png" alt="search" />
             </div>
             <div className="gnav-links">
                 <a href="home">Home</a>
