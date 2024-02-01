@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import Gnav from './main/gnav';
 
 const myElement = (
   <table>
@@ -16,8 +17,15 @@ const myElement = (
   </table>
 );
 
+const App = () => (
+  <div>
+    <Gnav />
+    <h1>Hello, world!</h1>
+    {myElement}
+  </div>
+);
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
-root.render(myElement);
+root.render(<App />);
 
