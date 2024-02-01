@@ -3,27 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import Gnav from './main/gnav';
 import Login from './authentication/login';
-import CardGrid from './main/card_grid';
-
-const myElement = (
-  <table>
-    <tr>
-      <th>Name</th>
-    </tr>
-    <tr>
-      <td>John</td>
-    </tr>
-    <tr>
-      <td>Elsa</td>
-    </tr>
-  </table>
-);
+import CardGrid from './catalog/card_grid';
 
 const App = () => (
   <div>
     <Gnav />
-    <Login />
-    <CardGrid />
+    <div className="container">
+      <Login />
+      <CardGrid />
+    </div>
   </div>
 );
 

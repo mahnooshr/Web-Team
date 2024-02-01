@@ -6,6 +6,10 @@
   height: 60px;
   background-color: #f8f8f8;
   border-bottom: 1px solid #e0e0e0;
+  overflow: hidden;
+  position: fixed;
+  min-width: 100%;
+  z-index: 1000;
 }
 
 .gnav-logo {
