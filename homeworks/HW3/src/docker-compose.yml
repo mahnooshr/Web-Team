@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  client:
+    build: ./nginx
+    ports:
+      - 8000:80
+    depends_on:
+      - django_server
+      - go_server
+
+  django_server:
+    build: ./django
+    # TODO PART 1
+
+  go_server:
+    build: ./go
+    # TODO PART 2
