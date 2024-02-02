@@ -32,7 +32,6 @@ function Register() {
 
           <button type="submit">Register</button>
 
-          
         </form>
         <div className="login-link">
             <p>Already have an account? </p>
@@ -41,7 +40,7 @@ function Register() {
             </a>
           </div>
       </div>
-
+     
     </div>
   )
 }

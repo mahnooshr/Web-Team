@@ -1,13 +1,20 @@
 .login-link {
     text-align: center;
-    font-size: 0.9em;  
+    align-items: center;
+    font-size: 0.7em;  
   }
   
+  .login-link {
+    font-size:.9em;
+    color:#fff;
+    text-align:center;
+    margin:25px 0 10px;
+  }
   .login-link p a {
-    color: #fff;
-    text-decoration: none;  
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
   }
-  
   .login-link p a:hover {
-    text-decoration: underline; 
+    text-decoration:underline;
   }
