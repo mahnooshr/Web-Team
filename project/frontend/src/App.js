@@ -6,6 +6,8 @@ import Contact from './pages/contact';
 import Cart from './pages/cart';
 import About from './pages/about';
 import NoPage from './pages/nopage';
+import Gfooter from './components/gfooter';
+import './styles/pages_general.css';
 
 export default function App() {
     const router = createBrowserRouter([
@@ -28,6 +30,7 @@ export default function App() {
         <div className='app'>
             <Gnav />
             <RouterProvider router={router} />
+            <Gfooter />
         </div>
     );
     }
