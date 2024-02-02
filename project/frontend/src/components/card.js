@@ -1,16 +1,15 @@
 import React from 'react';
 import '../styles/card.css';
 
-function Card() {
+function Card(props) {
+    const card = props.card;
     return (
         <div className="card">
-            <div className="card-image">
-                <img src="card-image.png" alt="card" />
-            </div>
+            <img className='card-image' src={card.image} alt={card.name} />
             <div className="card-content">
-                <h2>Card Title</h2>
-                <p>Card Description</p>
-                <button>Read More</button>
+                <div className='card-name'>{card.name}</div>
+                <div className='card-description'>{card.description}</div>
+                <button className='card-button'>Explore</button>
             </div>
         </div>
     );

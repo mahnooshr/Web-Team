@@ -6,7 +6,6 @@ import CardGrid from '../components/card_grid';
 export default function Home() {
     return (
         <div className="container">
-            <Login />
             <CardGrid />
         </div>
     );
