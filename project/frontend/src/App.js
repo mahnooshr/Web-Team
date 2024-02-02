@@ -7,6 +7,7 @@ import Cart from './pages/cart';
 import About from './pages/about';
 import NoPage from './pages/nopage';
 import Gfooter from './components/gfooter';
+import ProductsList from './pages/products-list';
 import './styles/pages_general.css';
 
 export default function App() {
@@ -24,7 +25,10 @@ export default function App() {
         }, {
             path: "/cart",
             element: <Cart />
-        }, 
+        }, {
+            path: "/products",
+            element: <ProductsList />
+        }
     ])
     return (
         <div className='app'>
