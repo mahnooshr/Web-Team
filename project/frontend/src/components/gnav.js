@@ -3,7 +3,7 @@
 
 import React from 'react';
 import './gnav.css';
-import IconButton from '../utils/icon_button';
+import IconButton from '../components/icon_button';
 
 function Gnav() {
     return (

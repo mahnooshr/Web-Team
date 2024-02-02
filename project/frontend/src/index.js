@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Gnav from './main/gnav';
-import Login from './authentication/login';
-import CardGrid from './catalog/card_grid';
+import Gnav from './components/gnav';
+import Login from './pages/login';
+import CardGrid from './components/card_grid';
 
 const App = () => (
   <div>
