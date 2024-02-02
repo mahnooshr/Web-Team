@@ -22,6 +22,7 @@ function Gnav() {
                 <a href="/cart">Cart</a>
                 <a href="/products">Products</a>
                 <a href="/login">Login</a>
+                <a href="/register">Register/a>
             </div>
         </div>
     );
