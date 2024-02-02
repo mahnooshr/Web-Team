@@ -2,7 +2,7 @@
 // this is the main navigation bar that is displayed on every page
 
 import React from 'react';
-import './gnav.css';
+import '../styles/gnav.css';
 import IconButton from '../components/icon_button';
 
 function Gnav() {

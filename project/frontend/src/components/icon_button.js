@@ -1,5 +1,5 @@
 import React from "react";
-import './icon_button.css';
+import '../styles/icon_button.css';
 
 function IconButton(props) {
     return (

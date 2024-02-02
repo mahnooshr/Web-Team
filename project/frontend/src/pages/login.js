@@ -1,6 +1,6 @@
 
 import React from 'react';
-import './login.css';
+import '../styles/login.css';
 
 function Login(){
     return (
@@ -28,13 +28,13 @@ function Login(){
       
             <div className="remember-forgot">
               <label><input type="checkbox" /> Remember me</label>
-              <a href="#">Forgot Password?</a>
+              <button>Forgot Password?</button>
             </div>
       
             <button type="submit">Login</button>
       
             <div className="register-link">
-              <p>Don't have an account? <a href="#">Register</a></p>
+              <p>Don't have an account? <button>Register</button></p>
             </div>
           </form>
         </div>
