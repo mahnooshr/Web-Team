@@ -1,9 +1,20 @@
-POST http://localhost:8000/api-auth/login/
+POST http://localhost:8000/login/
 Content-Type: application/json
 
 {
-    "username": "admin",
-    "password": "admin"
+    "username": "ali",
+    "password": "a1234",
+    "email": "ali@example.com"
 }
 
 
+###
+
+
+POST http://localhost:8000/register/
+Content-Type: application/json
+
+{
+    "username": "ali",
+    "password": "a1234"
+}
