@@ -16,10 +16,12 @@ function Gnav() {
                 <IconButton icon="search.png" alt="search" />
             </div>
             <div className="gnav-links">
-                <a href="/"> Home
-                </a>
+                <a href="/"> Home</a>
                 <a href="/about">About</a>
                 <a href="/contact">Contact</a>
+                <a href="/cart">Cart</a>
+                <a href="/products">Products</a>
+                <a href="/login">Login</a>
             </div>
         </div>
     );

@@ -8,6 +8,7 @@ import About from './pages/about';
 import NoPage from './pages/nopage';
 import Gfooter from './components/gfooter';
 import ProductsList from './pages/products-list';
+import Login from './pages/login';
 import './styles/pages_general.css';
 
 export default function App() {
@@ -28,6 +29,9 @@ export default function App() {
         }, {
             path: "/products",
             element: <ProductsList />
+        }, {
+            path: "/login",
+            element: <Login />
         }
     ])
     return (

@@ -4,7 +4,7 @@ import '../styles/login.css';
 
 function Login(){
     return (
-        <div class="wrapper">
+        <div class="container wrapper">
 
         <div className="login-box">
           <form action="">
