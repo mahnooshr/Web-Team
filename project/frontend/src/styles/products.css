@@ -47,10 +47,20 @@
 .product-li-info {
     margin-top: 10px;
     font-size: 15px;
+    min-width: 40%;
 }
 
 .product-li-price {
     margin-top: 10px;
     font-size: 20px;
     font-weight: bold;
+}
+
+.product-li-button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    cursor: pointer;
 }

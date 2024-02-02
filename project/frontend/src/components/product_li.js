@@ -11,7 +11,7 @@ export default function ProductLi(props) {
             </div>
             <div className="product-li-info">{product.description}</div>
             <div className="product-li-price">${product.price}</div>
-            <button>Add to cart</button>
+            <button className="product-li-button">Add to cart</button>
         </div>
     );
 }
