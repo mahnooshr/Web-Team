@@ -1,0 +1,13 @@
+.login-link {
+    text-align: center;
+    font-size: 0.9em;  
+  }
+  
+  .login-link p a {
+    color: #fff;
+    text-decoration: none;  
+  }
+  
+  .login-link p a:hover {
+    text-decoration: underline; 
+  }
