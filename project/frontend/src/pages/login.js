@@ -33,10 +33,14 @@ function Login(){
       
             <button type="submit">Login</button>
       
-            <div className="register-link">
-              <p>Don't have an account? <button>Register</button></p>
-            </div>
+            
           </form>
+          <div className="register-link">
+              <p>Don't have an account? </p>
+              <a href="/register">
+                <button>Register</button>
+              </a>
+            </div>
         </div>
       
       </div>
