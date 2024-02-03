@@ -1,0 +1,39 @@
+[
+    {
+      "model": "Category",
+      "pk": 1,
+      "fields": {
+        "name": "gift card",
+        "description": "gift card",
+        "image": "images/gift-card.png"
+      }
+    },
+    {
+      "model": "Category",
+      "pk": 2,
+      "fields": {
+        "name": "game credit",
+        "description": "game credit",
+        "image": "images/game-card.png"
+      }
+    },
+    {
+      "model": "Category",
+      "pk": 3,
+      "fields": {
+        "name": "virtual card",
+        "description": "virtual card",
+        "image": "images/virtual-card.png"
+      }
+    },
+    {
+      "model": "Category",
+      "pk": 4,
+      "fields": {
+        "name": "discount card",
+        "description": "discount card",
+        "image": "images/discount-card.png"
+      }
+    }
+    
+  ]
