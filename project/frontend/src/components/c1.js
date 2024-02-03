@@ -6,29 +6,29 @@ export default function ProductsList() {
     {
       id: 1,
       name: "Product 1",
-      price: 500,
-      description: "AirlineGift offers travel brands such as Air France, KLM, Southwest Airlines",
+      price: 100,
+      description: "This is product 1",
       image: "flight1.png"
     },
     {
       id: 2, 
       name: "Product 2",
-      price: 229,
-      description: "AirlineGift offers travel brands such as British Airways, Qantas",
+      price: 200,
+      description: "This is product 2",
       image: "flight2.png"
     },
     {
       id: 3,
       name: "Product 3", 
-      price: 5000,
-      description: "AirlineGift offers travel brands such as Delta Airlines, American Airlines, United Airlines",
+      price: 300,
+      description: "This is product 3",
       image: "flight3.png"
     } ,
     {
       id: 4,
       name: "Product 3", 
-      price: 500,
-      description: "﻿Purchase and use of gift cards available in North America only.",
+      price: 300,
+      description: "This is product 3",
       image: "flight4.png"
     } 
   ];
