@@ -141,6 +141,9 @@ def create_user_review(request):
 def create_order(request):
     serializer = OrderSerializer(data=request.data)
     if serializer.is_valid():
+        # check if in stock
+        if serializer.validated_data['product'].item_set.filter(is_owned=False).count() < serializer.validated_data['quantity']:
+            return Response("Not enough stock", status=status.HTTP_400_BAD_REQUEST)
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
@@ -169,5 +172,80 @@ def product_list(request):
     for product in serializer.data:
         product['stock'] = Item.objects.filter(product=product['id']).filter(is_owned=False).count()
     # handle files
+    return Response(serializer.data)
+
+
+@api_view(['GET'])
+@authentication_classes([SessionAuthentication, TokenAuthentication])
+@permission_classes([IsAuthenticated])
+def get_cart(request):
+    orders = Order.objects.filter(user=request.user).filter(is_finalized=False)
+    serializer = OrderSerializer(orders, many=True)
+    return Response(serializer.data)
+
+
+@api_view(['POST'])
+@authentication_classes([SessionAuthentication, TokenAuthentication])
+@permission_classes([IsAuthenticated])
+def finalize_order(request):
+    orders = Order.objects.filter(user=request.user).filter(is_finalized=False)
+    for order in orders:
+        order.is_finalized = True
+        # set items to owned
+        items = order.product.item_set.filter(is_owned=False)[:order.quantity]
+        for item in items:
+            item.is_owned = True
+            item.user = request.user
+            item.save()
+        order.save()
+    return Response("OK")
+
+
+@api_view(['POST'])
+@authentication_classes([SessionAuthentication, TokenAuthentication])
+@permission_classes([IsAuthenticated])
+def update_order(request):
+    order = Order.objects.get(id=request.data['id'])
+    # check if quantity is valid
+    if request.data['quantity'] < 0:
+        return Response("Invalid quantity", status=status.HTTP_400_BAD_REQUEST)
+    # if quantity is 0, delete the order
+    if request.data['quantity'] == 0:
+        order.delete()
+        return Response("OK")
+    # check if in stock
+    if order.product.item_set.filter(is_owned=False).count() < request.data['quantity']:
+        return Response("Not enough stock", status=status.HTTP_400_BAD_REQUEST)
+    order.quantity = request.data['quantity']
+    order.save()
+    return Response("OK")
+
+# get purchased items
+@api_view(['GET'])
+@authentication_classes([SessionAuthentication, TokenAuthentication])
+@permission_classes([IsAuthenticated])
+def purchased_items(request):
+    items = Item.objects.filter(user=request.user).filter(is_owned=True)
+    serializer = ItemSerializer(items, many=True)
+    return Response(serializer.data)
+
+# get user reviews
+@api_view(['GET'])
+def user_reviews(request):
+    # filter by product
+    if 'product' in request.GET:
+        reviews = UserReview.objects.filter(product=request.GET['product'])
+    else:
+        reviews = UserReview.objects.all()
+    serializer = UserReviewSerializer(reviews, many=True)
+    return Response(serializer.data)
+
+# get this user reviews
+@api_view(['GET'])
+@authentication_classes([SessionAuthentication, TokenAuthentication])
+@permission_classes([IsAuthenticated])
+def this_user_reviews(request):
+    reviews = UserReview.objects.filter(user=request.user)
+    serializer = UserReviewSerializer(reviews, many=True)
     return Response(serializer.data)
 
