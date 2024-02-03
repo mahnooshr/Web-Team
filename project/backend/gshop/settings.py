@@ -81,12 +81,12 @@ WSGI_APPLICATION = 'gshop.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': environ.get('DATABASE_NAME'),
-        'USER': environ.get('DATABASE_USER'),
-        'PASSWORD': environ.get('DATABASE_PASSWORD'),
-        'HOST': environ.get('DATABASE_HOST'),
-        'PORT': environ.get('DATABASE_PORT'),
+        "ENGINE": environ.get("SQL_ENGINE", "django.db.backends.sqlite3"),
+        "NAME": environ.get("SQL_DATABASE", BASE_DIR / "db.sqlite3"),
+        "USER": environ.get("SQL_USER", "user"),
+        "PASSWORD": environ.get("SQL_PASSWORD", "password"),
+        "HOST": environ.get("SQL_HOST", "localhost"),
+        "PORT": environ.get("SQL_PORT", "5432"),
     }
 }
 

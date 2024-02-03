@@ -8,7 +8,7 @@ from django.contrib.auth.models import Group, User
 from rest_framework.authtoken.models import Token
 
 from rest_framework.decorators import authentication_classes, permission_classes
-from rest_framework.authentication import SessionAuthentication, TokenAuthentication
+from rest_framework.authentication import SessionAuthentication, TokenAuthentication, BasicAuthentication
 from rest_framework.permissions import IsAuthenticated, BasePermission
 
 class IsAdminUser(BasePermission):
