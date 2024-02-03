@@ -4,6 +4,19 @@
     font-size: 0.7em;  
   }
   
+.register-box {
+  position: relative;
+  width: 600px;
+  height: 800px;
+  background: transparent;
+  border-radius: 15px;
+  border: 10px solid rgba(255,255,255,.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(15px);
+}
+
   .login-link {
     font-size:.9em;
     color:#fff;

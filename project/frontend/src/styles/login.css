@@ -65,10 +65,22 @@ h2 {
   color: #fff;
   transform: translateY(-50%);
 }
-.remember-forgot {
+.remember{
   margin:-15px 0 15px;
   font-size:.9em;
-  color:#fff;
+  color:rgb(240, 231, 231);
+  display:flex;
+  justify-content:left;
+}
+.remember input[type="checkbox"] {
+
+  justify-content:left;
+}
+.forgot {
+  margin:-15px 0 15px;
+  font-size:.9em;
+  
+  color:rgb(240, 231, 231);
   display:flex;
   justify-content:space-between;
 }
@@ -76,7 +88,7 @@ h2 {
   margin-right:3px;
 }
 .remember-forgot a {
-  color:#fff;
+  color:rgb(244, 237, 237)707;
   text-decoration:none;
 }
 .remember-forgot a:hover {
@@ -93,6 +105,19 @@ button {
   color:#000;
   font-weight:500;
 }
+.login-box {
+  position: relative;
+  width: 500px;
+  height: 700px;
+  background: transparent;
+  border-radius: 15px;
+  border: 10px solid rgba(255,255,255,.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(15px);
+}
+
 .register-link {
   font-size:.9em;
   color:#fff;

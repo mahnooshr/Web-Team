@@ -26,21 +26,24 @@ function Login(){
               <label>Password</label>
             </div>
       
-            <div className="remember-forgot">
+            <div className="remember">
+              
               <label><input type="checkbox" /> Remember me</label>
+             </div> 
+              <div className="forgot">
               <button>Forgot Password?</button>
             </div>
       
             <button type="submit">Login</button>
             
-            
-          </form>
-          <div className="register-link">
+            <div className="register-link">
               <p>Don't have an account? </p>
               <a href="/register">
                 <button>Register</button>
               </a>
             </div>
+          </form>
+         
         </div>
       
       </div>

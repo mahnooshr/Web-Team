@@ -1,0 +1,66 @@
+.containerf {
+    position: relative;
+    padding: 30px;
+    width: 700px;
+    height: 750px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto; /* Add margin to the top */
+    backdrop-filter: blur(15px);
+}
+
+form {
+    display: grid;
+    gap: 15px;
+}
+  
+  label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    padding: 30px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .successMessage,
+  .errorMessage {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .successMessage {
+    color: #28a745;
+    background-color: #d4edda;
+  }
+  
+  .errorMessage {
+    color: #dc3545;
+    background-color: #f8d7da;
+  }
+  

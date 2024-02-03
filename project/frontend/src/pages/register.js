@@ -31,14 +31,14 @@ function Register() {
           </div>
 
           <button type="submit">Register</button>
-
-        </form>
-        <div className="login-link">
+          <div className="login-link">
             <p>Already have an account? </p>
             <a href="/login">
               <button>Login</button>
             </a>
           </div>
+        </form>
+        
       </div>
      
     </div>
