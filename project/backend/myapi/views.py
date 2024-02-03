@@ -168,21 +168,6 @@ def product_list(request):
     # handle stocks
     for product in serializer.data:
         product['stock'] = Item.objects.filter(product=product['id']).filter(is_owned=False).count()
+    # handle files
     return Response(serializer.data)
-
-# retrieve image
-from django.http import FileResponse
-@api_view(['GET'])
-def retrieve_image(request):
-    print(request.GET)
-    if 'image' in request.GET:
-        image = request.GET['image']
-        try:
-            with open(image, 'rb') as file:
-                return FileResponse(file)
-        except FileNotFoundError:
-
-            return Response({"detail":"File not found."}, status=status.HTTP_404_NOT_FOUND)
-    else:
-        return Response({"detail":"Image not found."}, status=status.HTTP_404_NOT_FOUND)
 
