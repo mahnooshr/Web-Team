@@ -1,18 +1,15 @@
 import React from 'react';
 import '../styles/card.css';
 
-function Card(props) {
-    const card = props.card;
+const Card = ({name, description, image}) => {
     return (
-        <div className="card">
-            <img className='card-image' src={card.image} alt={card.name} />
-            <div className="card-content">
-                <div className='card-name'>{card.name}</div>
-                <div className='card-description'>{card.description}</div>
-                <button className='card-button'>Explore</button>
-            </div>
-        </div>
-    );
-}
+      <div className="card">
+        <img src={image}/>  
+        <h3>{name}</h3>
+        <p>{description}</p>
+        <img src="explore.png" width="50" height="50"/> 
+      </div>
+    )
+  }
 
 export default Card;
