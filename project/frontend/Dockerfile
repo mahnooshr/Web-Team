@@ -16,8 +16,25 @@ COPY . .
 # Build the React app
 RUN npm run build
 
-# Expose the port on which the app will run
-EXPOSE 3000
+# Use an official Nginx image as the base image
+FROM nginx:alpine
 
-# Define the command to run the app
-CMD ["npm", "start"]
+# Set the working directory in the container
+WORKDIR /usr/local/bin
+
+# Copy the build directory from the previous stage to the new stage
+COPY --from=prod /app/build /usr/share/nginx/html
+
+COPY generate-config.sh .
+
+# Copy the custom Nginx configuration file to the container
+COPY custom-nginx.template /etc/nginx/conf.d/
+
+# Make the custom Nginx configuration file executable
+RUN chmod +x generate-config.sh
+
+# Expose port 80
+EXPOSE 80
+
+# Start Nginx and generate the custom Nginx configuration file
+ENTRYPOINT [ "/bin/sh", "generate-config.sh"]

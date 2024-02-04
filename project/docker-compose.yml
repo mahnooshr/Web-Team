@@ -1,7 +1,7 @@
-version: '2.14.1'
+version: '3.8'
 
 services:
-  web:
+  api:
     build: ./backend
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
@@ -12,6 +12,19 @@ services:
       - ./.env.dev
     depends_on:
       - db
+
+  web:
+    build: ./frontend
+    command: npm start
+    volumes:
+      - ./frontend/:/usr/src/frontend/
+      - /usr/src/frontend/node_modules
+    ports:
+      - 3000:3000
+    env_file:
+      - ./.env.dev
+    depends_on:
+      - api
 
   db:
     image: postgres:15

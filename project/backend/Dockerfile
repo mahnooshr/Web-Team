@@ -1,26 +1,28 @@
 # Use the official Python base image
-FROM python:3.10
+FROM python:3.10.12-slim-buster
+
+# Set the working directory in the container
+WORKDIR /usr/src/backend
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-# Set the working directory in the container
-WORKDIR /usr/src/backend
+# install system dependencies
+RUN apt-get update && apt-get install -y netcat
 
 # Install dependencies
+RUN pip install --upgrade pip
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
+
+# copy entrypoint.sh
+COPY ./entrypoint.sh .
+RUN sed -i 's/\r$//g' /usr/src/backend/entrypoint.sh
+RUN chmod +x /usr/src/backend/entrypoint.sh
 
 # Copy the project code into the container
 COPY . .
 
-# Set up PostgreSQL database
-RUN apt-get update && apt-get install -y postgresql-client
-RUN pip install psycopg2
-
-# Expose the port on which the Django app will run
-EXPOSE 8000
-
-# Run the Django development server
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+# run entrypoint.sh
+ENTRYPOINT ["/usr/src/backend/entrypoint.sh"]
