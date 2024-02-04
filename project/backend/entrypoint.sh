@@ -17,5 +17,6 @@ python manage.py migrate
 python manage.py loaddata /usr/src/backend/fixtures/groups
 # python manage.py loaddata /usr/src/backend/fixtures/categories
 # python manage.py loaddata /usr/src/backend/fixtures/products
+python manage.py createsuperuser --noinput
 
 exec "$@"
