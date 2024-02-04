@@ -5,6 +5,8 @@ import React from 'react';
 import '../styles/gnav.css';
 import IconButton from '../components/icon_button';
 
+
+
 function Gnav() {
     return (
         <div className="gnav">
@@ -12,8 +14,12 @@ function Gnav() {
                 <img src="logo.png" alt="logo" />
             </div>
             <div className="gnav-search">
-                <input type="text" placeholder="Search" />
-                <IconButton icon="search.png" alt="search" />
+                <form>
+                    <input type="text" placeholder="Search" />
+                    <IconButton icon="search.png" alt="search"  onClick={() => {
+                        alert('search');
+                    }} />
+                </form>
             </div>
             <div className="gnav-links">
                 <a href="/"> Home</a>

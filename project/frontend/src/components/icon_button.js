@@ -3,7 +3,7 @@ import '../styles/icon_button.css';
 
 function IconButton(props) {
     return (
-        <div className="icon-button">
+        <div className="icon-button" onClick={props.onClick}>
             <img src={props.icon} alt={props.alt} />
         </div>
     );

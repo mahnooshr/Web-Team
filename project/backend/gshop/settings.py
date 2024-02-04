@@ -11,24 +11,21 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
-from dotenv import load_dotenv
-
-load_dotenv()
 
 from os import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = environ.get('SECRET_KEY')
+SECRET_KEY = environ.get('SECRET_KEY', 'django-insecure-(k%gvsz=0e$x89j9@5%a$9rk6ab0i6g=qhq0(tmf^4$!8k3fm4')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = environ.get('DEBUG', 'True') == 'True'
 
-DJANGO_ALLOWED_HOSTS = environ.get('DJANGO_ALLOWED_HOSTS')
+DJANGO_ALLOWED_HOSTS = environ.get('DJANGO_ALLOWED_HOSTS', 'localhost')
 ALLOWED_HOSTS = DJANGO_ALLOWED_HOSTS.split(' ')
 
 
@@ -83,8 +80,8 @@ DATABASES = {
     'default': {
         "ENGINE": environ.get("SQL_ENGINE", "django.db.backends.sqlite3"),
         "NAME": environ.get("SQL_DATABASE", BASE_DIR / "db.sqlite3"),
-        "USER": environ.get("SQL_USER", "user"),
-        "PASSWORD": environ.get("SQL_PASSWORD", "password"),
+        "USER": environ.get("SQL_USER", "soli"),
+        "PASSWORD": environ.get("SQL_PASSWORD", "sol19375"),
         "HOST": environ.get("SQL_HOST", "localhost"),
         "PORT": environ.get("SQL_PORT", "5432"),
     }

@@ -1,12 +1,12 @@
 upstream backend {
-    server ${BACKEND_HOST};
+    server api:8000;
 }
 
 server {
     listen 80;
 
     location /api/ {
-      proxy_pass http://backend$request_uri;
+      proxy_pass http://backend;
     }
 
     location / {
