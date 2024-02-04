@@ -13,8 +13,8 @@ fi
 
 python manage.py flush --no-input
 python manage.py migrate
-python manage.py loaddata groups
-python manage.py loaddata categories
-python manage.py loaddata products
+python manage.py loaddata /usr/src/backend/fixtures/groups
+python manage.py loaddata /usr/src/backend/fixtures/categories
+python manage.py loaddata /usr/src/backend/fixtures/products
 
 exec "$@"

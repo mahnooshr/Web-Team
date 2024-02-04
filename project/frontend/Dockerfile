@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as the base image
-FROM node:21.6.1
+FROM node:21.6.1-alpine as prod
 
 # Set the working directory in the container
 WORKDIR /usr/src/frontend
@@ -23,7 +23,7 @@ FROM nginx:alpine
 WORKDIR /usr/local/bin
 
 # Copy the build directory from the previous stage to the new stage
-COPY --from=prod /app/build /usr/share/nginx/html
+COPY --from=prod /usr/src/frontend/build /usr/share/nginx/html
 
 COPY generate-config.sh .
 

@@ -12,7 +12,7 @@ services:
       - ./.env.dev
     depends_on:
       - db
-
+  
   web:
     build: ./frontend
     command: npm start
