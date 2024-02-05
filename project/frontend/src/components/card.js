@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/card.css';
+import IconButton from './icon_button';
 
 const Card = ({name, description, image}) => {
     return (
@@ -7,7 +8,9 @@ const Card = ({name, description, image}) => {
         <img className='card-image' src={image} alt={name}/>  
         <h3 className='card-name'>{name}</h3>
         <p className='card-description'>{description}</p>
-        <img className='card-button' src="explore.png"  alt={'explore'} width="50" height="50"/> 
+        <IconButton className='card-button' icon="explore.png" alt="explore" onClick={() => {
+            alert('explore');
+        }} />
       </div>
     )
   }
