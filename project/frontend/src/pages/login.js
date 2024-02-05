@@ -13,7 +13,6 @@ function Login(){
   const headers = { "Content-Type": "multipart/form-data" };
 
   const handle_change = (e) => {
-    console.log(e.target.name, e.target.value);
     setFormData({ ...form_data, [e.target.name]: e.target.value });
   }
 
@@ -27,8 +26,11 @@ function Login(){
       headers: headers
     }).then((res) => {
       localStorage.setItem('token', res.data.token);
+      alert('Logged in');
+      window.location.href = '/';
     }).catch((err) => {
       console.log(err);
+      alert('Invalid credentials');
     });
   }
   
