@@ -24,13 +24,13 @@
 }
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     .card-grid {
         grid-template-columns: repeat(2, 1fr); 
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
     .card-grid {
         grid-template-columns: 1fr; 
     }
