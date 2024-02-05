@@ -15,4 +15,7 @@ export default function ProductLi(props) {
             <button className="product-li-button">Add to cart</button>
         </div>
     );
+    
 }
+
+
