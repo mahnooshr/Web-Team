@@ -3,6 +3,9 @@ import "../styles/products.css";
 
 export default function ProductLi(props) {
     const product = props.product;
+
+    
+
     return (
         
         <div className="product-li">
