@@ -74,6 +74,7 @@
   .gnav {
     flex-direction: column;
     height: auto;
+    position: absolute;
   }
 
   .gnav-logo,

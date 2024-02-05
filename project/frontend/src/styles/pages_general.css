@@ -68,3 +68,9 @@ code {
   border-radius: 8px;
   margin-bottom: 10px;
 }
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding-top : 600px;
+  }
+}
