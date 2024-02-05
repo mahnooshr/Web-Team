@@ -134,4 +134,5 @@ button {
 
 .login-box form {
   background: transparent;
+  box-shadow: none;
 }
