@@ -1,5 +1,4 @@
 .products-list {
-    /* vertical flexbox */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,7 +9,6 @@
 }
 
 .product-li {
-    /* horizontal flex */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -26,7 +24,6 @@
 }
 
 .product-li-left {
-    /* vertical flexbox */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,14 +62,13 @@
     cursor: pointer;
 }
 
-
 @media screen and (max-width: 500px) {
     .product-li {
-        flex-direction: column; 
+        flex-direction: column;
         align-items: flex-start;
     }
 
     .product-li-info {
-        min-width: 100%; 
+        min-width: 100%;
     }
 }
