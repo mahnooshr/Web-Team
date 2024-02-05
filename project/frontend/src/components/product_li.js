@@ -4,6 +4,7 @@ import "../styles/products.css";
 export default function ProductLi(props) {
     const product = props.product;
     return (
+        
         <div className="product-li">
             <div className="product-li-left">
                 <img className="product-li-icon" src={product.image} alt="Product" />
@@ -15,3 +16,15 @@ export default function ProductLi(props) {
         </div>
     );
 }
+export default function ProductLi({product, addToCart}) {
+
+    function handleClick() {
+      addToCart(product);
+    }
+    
+    return (
+      <button onClick={handleClick}>
+        Add to Cart
+      </button>
+    )
+  }
