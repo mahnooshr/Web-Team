@@ -1,26 +1,54 @@
-import React from "react";
-import '../styles/about.css';
-import { NavLink } from 'react-router-dom'
+// About.js
 
-const About = () => {
-    return (
-        <div>
-            <div className="container py-5 my-5">
-                <div className="row">
-                    <div className="col-md-6">
-                        <h1 className="text-primary fw-bold mb-4">About Us</h1>
-                        <p className="lead mb-4">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo molestiae earum rem doloremque, nihil delectus ullam error consectetur? Dicta, non exercitationem in consectetur totam dolorum at voluptate laudantium aliquam, officiis perspiciatis molestias reiciendis consequuntur ullam perferendis velit blanditiis distinctio assumenda a maxime reprehenderit atque. Nam eius rerum distinctio, a illo earum, optio molestias nostrum maxime quibusdam delectus, adipisci impedit? Nam corporis reiciendis minus quod eaque, laborum veritatis voluptatibus id maiores tempore accusantium recusandae perspiciatis, officia cum ad maxime fuga repellendus a magni consequatur. Unde adipisci hic provident est sint corporis, dolorem esse autem soluta molestiae optio quisquam eligendi obcaecati minima?
-                        </p>
-                        <NavLink to="/contact" className="btn btn-outline-primary px-3">Contact Us</NavLink>
-                    </div>
-                    <div className="col-md-6 d-flex justify-content-center">
-                        <img src="/assets/images/about.png" alt="About Us" height="400px" width="400px" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
+import React from 'react';
+
+import '../styles/about.css';
+
+function About() {
+
+  return (
+    <section className="about">
+      <div className="about-content">
+        <h1>About Us</h1>
+
+        <p>
+        Welcome to our online store! At GSHOP, we are dedicated to
+        delivering an exceptional shopping experience. 
+
+       </p>
+        <p>  
+        As part of our commitment to making your
+        shopping experience even more special, we offer customizable gift cards.
+        </p>
+        <p>  
+        These gift cards can be purchased directly or used to enjoy a variety of
+        special services.
+        </p>
+        <p>  
+        Whether you're celebrating a birthday, anniversary, or
+        any special occasion, our gift cards and services make for thoughtful
+        and unique presents. Share the joy of GSHOP with your loved
+        ones, and let them discover the perfect items that reflect their
+        personal style.
+        </p>
+
+        <div className="images">
+
+<div className="image">
+  <img src="https://static.generated.photos/vue-static/face-generator/landing/wall/20.jpg" />
+  <p>Our Storefront</p>  
+</div>
+
+<div className="image">    
+  <img src="https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/fallbacks/mobile-03.jpg" />
+  <p>Our CEO</p>
+</div>
+
+</div>
+        
+      </div>
+    </section>
+  );
 }
 
-export default About
+export default About;

@@ -27,3 +27,43 @@ code {
   min-height: 100vh;
   
 }
+/* styles/pages_general.css */
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.about-section {
+  background-color: #fff; /* White background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  margin-bottom: 20px;
+}
+
+.about-heading {
+  color: #333;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.about-description {
+  color: #666;
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.about-images {
+  display: flex;
+  justify-content: space-around;
+}
+
+.about-image {
+  width: 150px; /* Adjust the size as needed */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
