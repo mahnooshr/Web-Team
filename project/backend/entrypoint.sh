@@ -15,8 +15,9 @@ python manage.py flush --no-input
 python manage.py makemigrations myapi
 python manage.py migrate
 python manage.py loaddata /usr/src/backend/fixtures/groups
-# python manage.py loaddata /usr/src/backend/fixtures/categories
-# python manage.py loaddata /usr/src/backend/fixtures/products
+python manage.py loaddata /usr/src/backend/fixtures/categories
+python manage.py loaddata /usr/src/backend/fixtures/products
+python manage.py loaddata /usr/src/backend/fixtures/items
 python manage.py createsuperuser --noinput
 
 exec "$@"
