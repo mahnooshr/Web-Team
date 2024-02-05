@@ -25,6 +25,7 @@ export default function ProductsList(probs) {
         setProducts(res.data);
       })
   });
+
   return (
     <div className="container">
       <h1>Products</h1>
