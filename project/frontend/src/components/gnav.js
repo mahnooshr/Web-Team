@@ -33,6 +33,7 @@ function Gnav() {
                 <a href="/products">Products</a>
                 <a href="/login">Login</a>
                 <a href="/register">Register</a>
+                <a href="/inventory">Inventory</a>
             </div>
         </div>
     );

@@ -10,6 +10,7 @@ import Gfooter from './components/gfooter';
 import ProductsList from './pages/products-list';
 import Login from './pages/login';
 import Register from './pages/register';
+import Inventory from './pages/inventory';
 import './styles/pages_general.css';
 
 export default function App() {
@@ -36,6 +37,9 @@ export default function App() {
         }, {
             path: "/register",
             element: <Register/>
+        }, {
+            path: "/inventory",
+            element: <Inventory/>
         }
     ])
     return (
