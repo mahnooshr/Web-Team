@@ -10,7 +10,7 @@ import IconButton from '../components/icon_button';
 function Gnav() {
     return (
         <div className="gnav">
-            <div className="gnav-logo" onclick="window.location.href = '/';">
+            <div className="gnav-logo" onclick={() => {window.location.href = '/'}}>
                 <img src="logo.png" alt="logo" />
             </div>
             <form className="gnav-search">
