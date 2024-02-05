@@ -10,6 +10,7 @@ from rest_framework.authtoken.models import Token
 from rest_framework.decorators import authentication_classes, permission_classes
 from rest_framework.authentication import SessionAuthentication, TokenAuthentication, BasicAuthentication
 from rest_framework.permissions import IsAuthenticated, BasePermission
+import datetime
 
 class IsAdminUser(BasePermission):
     def has_permission(self, request, view):
@@ -145,6 +146,10 @@ def create_user_review(request):
 @authentication_classes([SessionAuthentication, TokenAuthentication])
 @permission_classes([IsAuthenticated])
 def create_order(request):
+    product = Product.objects.get(id=request.data['product'])
+    request.data['order_date'] = datetime.datetime.now()
+    request.data['user'] = request.user.id
+    print(request.data)
     serializer = OrderSerializer(data=request.data)
     if serializer.is_valid():
         # check if in stock
@@ -152,7 +157,8 @@ def create_order(request):
             return Response("Not enough stock", status=status.HTTP_400_BAD_REQUEST)
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
-    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    print('invalid data', serializer.errors)
+    return Response('Invalid data', status=status.HTTP_400_BAD_REQUEST)
 
 # get categories list
 @api_view(['GET'])
@@ -178,13 +184,25 @@ def product_list(request):
     for product in serializer.data:
         product['stock'] = Item.objects.filter(product=product['id']).filter(is_owned=False).count()
     # handle files
-    return Response(serializer.data)
+    return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+# get product detail
+@api_view(['GET'])
+def product_detail(request, id):
+    try:
+        product = Product.objects.get(id=id)
+    except Product.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+    serializer = ProductSerializer(product)
+    return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 @api_view(['GET'])
 @authentication_classes([SessionAuthentication, TokenAuthentication])
 @permission_classes([IsAuthenticated])
 def get_cart(request):
+    print(request.user)
     orders = Order.objects.filter(user=request.user).filter(is_finalized=False)
     serializer = OrderSerializer(orders, many=True)
     return Response(serializer.data)
@@ -207,7 +225,7 @@ def finalize_order(request):
     return Response("OK")
 
 
-@api_view(['POST'])
+@api_view(['PUT'])
 @authentication_classes([SessionAuthentication, TokenAuthentication])
 @permission_classes([IsAuthenticated])
 def update_order(request):
@@ -224,7 +242,8 @@ def update_order(request):
         return Response("Not enough stock", status=status.HTTP_400_BAD_REQUEST)
     order.quantity = request.data['quantity']
     order.save()
-    return Response("OK")
+    serializer = OrderSerializer(order)
+    return Response(serializer.data, status=status.HTTP_200_OK)
 
 # get purchased items
 @api_view(['GET'])

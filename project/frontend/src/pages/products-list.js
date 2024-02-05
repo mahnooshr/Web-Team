@@ -14,7 +14,7 @@ export default function ProductsList(probs) {
 
   const baseUrl = "http://" + (process.env.BACKEND_HOST || 'localhost') + "/api/products/";
   const [products, setProducts] = useState(dummy_products);
-
+  
   let params = {};
   if (query.get('category') !== null){
     params['category'] = query.get('category');

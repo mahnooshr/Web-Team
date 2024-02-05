@@ -46,7 +46,6 @@ class Order(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.IntegerField()
-    total_price = models.DecimalField(max_digits=5, decimal_places=2)
     order_date = models.DateTimeField(auto_now_add=True)
     is_finalized = models.BooleanField(default=False)
 
