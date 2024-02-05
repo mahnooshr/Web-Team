@@ -29,6 +29,34 @@ const products = [
   } 
 ];
 
+const categories = [
+  { 
+    id: 1,
+    name: "Flights",
+    description: "Flight tickets & travel packages",
+    image: "/flightcart.png"
+  },
+  {
+    id: 2,
+    name: "Games", 
+    description: "fun and games",
+    image: "game.png"  
+  },
+  {
+    id: 3,
+    name: "Food",
+    description: "cafe's and restaurants",
+    image: "foods.png"
+  },  
+  {
+    id: 4,
+    name: "services",
+    description: "Internet and proxy services",
+    image: "internet.png"
+  } 
+]
+
 module.exports = {
-  products
+  products,
+  categories
 };
