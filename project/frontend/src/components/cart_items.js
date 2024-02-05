@@ -1,9 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import axios from 'axios';
 
 const CartItem = ({ key, item, onIncrease, onDecrease, onDelete }) => {
 
-  const {product, setProduct} = useState({});
+  const {product, setProduct} = useState({
+    id: 0,
+    name: "",
+    price: 0,
+    description: "",
+  });
   const url = "http://" + (process.env.BACKEND_HOST || 'localhost') + "/api/products/" + item.product + "/";
   useEffect(() => {
     axios.get(url)
@@ -15,7 +20,7 @@ const CartItem = ({ key, item, onIncrease, onDecrease, onDelete }) => {
       .catch(err => {
         console.log(err);
       });
-  });
+  }, []);
 
   return (
     <div className="cart-item">
