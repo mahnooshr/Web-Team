@@ -69,7 +69,7 @@
   text-decoration: underline;
 }
 
-/* Responsive Styles */
+
 @media only screen and (max-width: 768px) {
   .gnav {
     flex-direction: column;
