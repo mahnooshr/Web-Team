@@ -24,13 +24,21 @@
 
 .gnav-search {
   display: flex;
+  flex-direction: row;
+  background: transparent;
   align-items: center;
+  justify-content: center;
   width: 100%;
-  padding: 10%;
+  min-height: 100%;
+  padding: -30px 20px 0px;
+  min-height: 100%;
+  box-shadow: none;
+  border: none;
+  gap: 10px;
 }
 
 .gnav-search input {
-  width: 100%;
+  min-width: 70%;
   height: 30px;
   border: 1px solid #e0e0e0;
   border-radius: 5px;

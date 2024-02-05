@@ -10,17 +10,15 @@ import IconButton from '../components/icon_button';
 function Gnav() {
     return (
         <div className="gnav">
-            <div className="gnav-logo">
+            <div className="gnav-logo" onclick="window.location.href = '/';">
                 <img src="logo.png" alt="logo" />
             </div>
-            <div className="gnav-search">
-                <form>
-                    <input type="text" placeholder="Search" />
-                    <IconButton icon="search.png" alt="search"  onClick={() => {
-                        alert('search');
-                    }} />
-                </form>
-            </div>
+            <form className="gnav-search">
+                <input type="text" placeholder="Search" />
+                <IconButton icon="search.png" alt="search"  onClick={() => {
+                    alert('search');
+                }} />
+            </form>
             <div className="gnav-links">
                 <a href="/"> Home</a>
                 <a href="/about">About</a>

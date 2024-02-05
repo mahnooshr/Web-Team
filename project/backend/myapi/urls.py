@@ -22,6 +22,4 @@ urlpatterns = [
     path('get_cart/', views.get_cart),
     path('purchased_items/', views.purchased_items),
     path('groups/', views.groups)
-
-
 ]

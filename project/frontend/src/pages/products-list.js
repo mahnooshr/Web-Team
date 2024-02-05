@@ -6,7 +6,7 @@ import {products as dummy_products} from "../constants/dummy";
 
 export default function ProductsList(probs) {
 
-  const baseUrl = "http://" + (process.env.BACKEND_HOST || 'localhost:8000') + "/api/products/";
+  const baseUrl = "http://" + (process.env.BACKEND_HOST || 'localhost') + "/api/products/";
   const [products, setProducts] = useState(dummy_products);
 
   let params = {};
@@ -17,14 +17,13 @@ export default function ProductsList(probs) {
   }
   
   useEffect(() => {
-    console.log(baseUrl);
     axios.get(baseUrl, {
       params: params
     })
       .then(res => {
         setProducts(res.data);
       })
-  });
+  }, []);
   
   return (
     <div className="container">
