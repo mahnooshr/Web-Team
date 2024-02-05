@@ -16,15 +16,3 @@ export default function ProductLi(props) {
         </div>
     );
 }
-export default function ProductLi({product, addToCart}) {
-
-    function handleClick() {
-      addToCart(product);
-    }
-    
-    return (
-      <button onClick={handleClick}>
-        Add to Cart
-      </button>
-    )
-  }

@@ -25,11 +25,6 @@ export default function ProductsList(probs) {
         setProducts(res.data);
       })
   });
-  <ProductLi
-  key={product.id} 
-  product={product}
-  addToCart={addToCart} 
-/>
   return (
     <div className="container">
       <h1>Products</h1>
