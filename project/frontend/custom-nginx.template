@@ -9,6 +9,10 @@ server {
       proxy_pass http://backend;
     }
 
+    location /api-auth/ {
+      proxy_pass http://backend;
+    }
+
     location / {
       root /usr/share/nginx/html;
       try_files $uri $uri/ /index.html;

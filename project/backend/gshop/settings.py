@@ -80,8 +80,8 @@ DATABASES = {
     'default': {
         "ENGINE": environ.get("SQL_ENGINE", "django.db.backends.sqlite3"),
         "NAME": environ.get("SQL_DATABASE", BASE_DIR / "db.sqlite3"),
-        "USER": environ.get("SQL_USER", "soli"),
-        "PASSWORD": environ.get("SQL_PASSWORD", "sol19375"),
+        "USER": environ.get("SQL_USER", "username"),
+        "PASSWORD": environ.get("SQL_PASSWORD", "password"),
         "HOST": environ.get("SQL_HOST", "localhost"),
         "PORT": environ.get("SQL_PORT", "5432"),
     }
@@ -133,3 +133,6 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10
 }
+
+MEDIA_ROOT = environ.get('MEDIA_ROOT', './media/')
+MEDIA_URL= environ.get('MEDIA_URL', '/media/')

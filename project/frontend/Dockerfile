@@ -8,7 +8,7 @@ WORKDIR /usr/src/frontend
 COPY package*.json ./
 
 # Install project dependencies
-RUN npm install
+RUN npm install --loglevel verbose
 
 # Copy the entire project to the working directory
 COPY . .

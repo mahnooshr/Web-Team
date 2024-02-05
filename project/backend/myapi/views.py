@@ -41,6 +41,12 @@ def login(request):
     serializer = UserSerializer(instance=user)
     return Response({'token': token.key, "user": serializer.data}, status=status.HTTP_200_OK)
 
+@api_view(['GET'])
+def groups(request):
+    groups = Group.objects.all()
+    serializer = GroupSerializer(groups, many=True)
+    return Response(serializer.data, status=status.HTTP_200_OK)
+
 @api_view(['POST'])
 @authentication_classes([SessionAuthentication, TokenAuthentication])
 @permission_classes([IsAuthenticated])

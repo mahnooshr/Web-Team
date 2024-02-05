@@ -20,8 +20,8 @@ urlpatterns = [
     path('finalize_order/', views.finalize_order),
     path('update_order/', views.update_order),
     path('get_cart/', views.get_cart),
-    path('purchased_items/', views.purchased_items)
-
+    path('purchased_items/', views.purchased_items),
+    path('groups/', views.groups)
 
 
 ]
