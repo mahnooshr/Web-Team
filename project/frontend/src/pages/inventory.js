@@ -1,44 +1,25 @@
-import React, { useEffect, useState } from "react";
-import ProductLi from "../components/product_li";
-import axios from "axios";
-import {products as dummy_products} from "../constants/dummy";
-import { useLocation } from "react-router-dom";
-
-export default function ProductsList(probs) {
-  function useQuery() {
-    const { search } = useLocation();
-  
-    return React.useMemo(() => new URLSearchParams(search), [search]);
-  }
-  const query = useQuery();  
-
-  const baseUrl = "http://" + (process.env.BACKEND_HOST || 'localhost') + "/api/products/";
-  const [products, setProducts] = useState(dummy_products);
-
-  let params = {};
-  if (query.get('category') !== null){
-    params['category'] = query.get('category');
-  } else if (query.get('search') !== null){
-    params['search'] = query.get('search');
-  }
-  
-  useEffect(() => {
-    console.log(baseUrl);
-    console.log(params);
-    axios.get(baseUrl, {
-      params: params
-    })
-      .then(res => {
-        console.log(res.data);
-        setProducts(res.data);
-      })
-  }, []);
+import React, { useState } from 'react';
+import '../styles/pages_general.css';
+const ShoppingCart = () => {
+  const [items, setItems] = useState([
+    { id: 1, name: 'Item 1', price: 10.99 },
+    { id: 2, name: 'Item 2', price: 19.99 },
+    { id: 3, name: 'Item 3', price: 14.99 },
+    // Add more items as needed
+  ]);
 
   return (
-    <div className="container">
-      <h1>Inventory</h1>
-
-      
+    <div>
+      <h1>Shopping Cart</h1>
+      <ul>
+        {items.map(item => (
+          <li key={item.id}>
+            {item.name} - ${item.price}
+          </li>
+        ))}
+      </ul>
     </div>
   );
-}
+};
+
+export default ShoppingCart;
